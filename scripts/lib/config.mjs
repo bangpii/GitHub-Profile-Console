@@ -19,11 +19,11 @@ function assertText(value, label, maximum) {
   assert(value.length <= maximum, `${label} must be ${maximum} characters or fewer.`);
 }
 
-function assertUrl(value, label, { allowEmpty = false } = {}) {
+function assertUrl(value, label, { allowEmpty = false, protocols = ["http:", "https:"] } = {}) {
   if (allowEmpty && value === "") return;
   try {
     const url = new URL(value);
-    assert(["http:", "https:"].includes(url.protocol), `${label} must use http or https.`);
+    assert(protocols.includes(url.protocol), `${label} must use ${protocols.join(" or ")}.`);
   } catch {
     throw new Error(`Invalid profile.config.json: ${label} must be a valid URL.`);
   }
@@ -64,6 +64,19 @@ export function validateConfig(config) {
     assertText(project?.heroLabel, `projects[${index}].heroLabel`, 30);
   });
 
+  assert(Array.isArray(config.gallery) && config.gallery.length >= 1 && config.gallery.length <= 24, "gallery must contain 1 to 24 items.");
+  config.gallery.forEach((item, index) => {
+    assertText(item?.name, `gallery[${index}].name`, 40);
+    assertText(item?.image, `gallery[${index}].image`, 200);
+    assertUrl(item?.url ?? "", `gallery[${index}].url`, { allowEmpty: true });
+    assertText(item?.focus, `gallery[${index}].focus`, 60);
+  });
+
+  assert(Array.isArray(config.capabilities) && config.capabilities.length >= 1 && config.capabilities.length <= 24, "capabilities must contain 1 to 24 items.");
+  config.capabilities.forEach((item, index) => assertText(item, `capabilities[${index}]`, 80));
+  assert(Array.isArray(config.infrastructure) && config.infrastructure.length >= 1 && config.infrastructure.length <= 24, "infrastructure must contain 1 to 24 items.");
+  config.infrastructure.forEach((item, index) => assertText(item, `infrastructure[${index}]`, 80));
+
   assert(Array.isArray(config.techStack) && config.techStack.length >= 1 && config.techStack.length <= 18, "techStack must contain 1 to 18 items.");
   config.techStack.forEach((item, index) => assertText(item, `techStack[${index}]`, 30));
 
@@ -71,7 +84,7 @@ export function validateConfig(config) {
   config.links.forEach((link, index) => {
     assertText(link?.label, `links[${index}].label`, 14);
     assertText(link?.value, `links[${index}].value`, 28);
-    assertUrl(link?.url, `links[${index}].url`);
+    assertUrl(link?.url, `links[${index}].url`, { protocols: ["http:", "https:", "mailto:"] });
     assert(typeof link?.logo === "string" && link.logo.length <= 30, `links[${index}].logo must be 30 characters or fewer.`);
     assert(/^[A-Fa-f0-9]{6}$/.test(link?.color), `links[${index}].color must be a six-character hex value without #.`);
   });

@@ -1,77 +1,247 @@
 {
-  "$schema": "./profile.schema.json",
-  "profile": {
-    "name": "Your Name",
-    "username": "yourusername",
-    "headline": "AI Engineer & Product Builder",
-    "affiliation": "Your University or Company",
-    "location": "City, Country",
-    "status": "Learning / Building / Shipping",
-    "about": [
-      "I build practical systems at the intersection of artificial intelligence, software engineering, and products people can trust.",
-      "My work combines technical exploration with a builder mindset: understand the problem, test the system, and share what actually works."
-    ]
-  },
-  "research": {
-    "primary": "AI Agents",
-    "direction": "Reliable autonomous systems",
-    "themes": "Tool use / evaluation / human control",
-    "narrative": "I am interested in systems that can observe state, use tools, evaluate outcomes, and take bounded actions with clear evidence and human oversight."
-  },
-  "focus": [
-    {
-      "name": "AI Agents",
-      "description": "Autonomous workflows, tool use, evaluation, and reliable agent behavior."
+    "$schema": "./profile.schema.json",
+    "profile": {
+        "name": "Baihaqie Ar Rafi",
+        "username": "bangpii",
+        "headline": "Full Stack Web Developer",
+        "affiliation": "Politeknik Negeri Medan",
+        "location": "Medan, Sumatra Utara",
+        "status": "Frontend / Backend / Software Eng",
+        "about": [
+            "I build web applications end to end, from the interface the user touches to the API, database, and server behind it. Most of my work is product shaped: a real problem, a working application, and a deployment that stays up.",
+            "I work mostly with JavaScript and PHP, building interfaces in React and Tailwind, services in Node.js, Express, and Laravel, and shipping on shared hosting or a VPS.",
+            "I am based in Medan, Indonesia, where I study at Politeknik Negeri Medan and have interned with SAE DIGITAL Academy. I am open to collaboration on web development and information systems work."
+        ]
     },
-    {
-      "name": "Applied AI",
-      "description": "Turning model capabilities into useful and testable software systems."
+    "research": {
+        "primary": "Full Stack Web Development",
+        "direction": "Modern web apps, end to end",
+        "themes": "React / Laravel / Node.js / MySQL",
+        "narrative": "I care about the whole path a request takes. On the front, a responsive interface that stays fast and readable on a phone. In the middle, a clean API and a database schema that will not fight me six months later. On the back, a server that can be deployed and debugged without drama. I also set up the network these applications run on, so I can trace a problem end to end instead of guessing where it lives."
     },
-    {
-      "name": "Developer Tools",
-      "description": "Better workflows for building, testing, and operating modern software."
-    }
-  ],
-  "projects": [
-    {
-      "name": "Project One",
-      "url": "https://github.com/yourusername/project-one",
-      "homepage": "",
-      "focus": "Primary project focus",
-      "summary": "A concise explanation of what the project does and why it matters.",
-      "heroLabel": "Primary build"
+    "focus": [{
+            "name": "Full Stack Web Development",
+            "description": "End-to-end delivery: interface, API, database, and deployment for production-ready web applications."
+        },
+        {
+            "name": "Frontend Engineering",
+            "description": "Responsive interfaces with React, Tailwind CSS, and Vite, built from reusable components."
+        },
+        {
+            "name": "Backend and Database",
+            "description": "REST APIs and business logic with Node.js, Express, Laravel, MySQL, and MongoDB."
+        },
+        {
+            "name": "Server and Deployment",
+            "description": "Linux servers, Nginx and Apache, and deploying to shared hosting or a VPS."
+        },
+        {
+            "name": "Network Infrastructure",
+            "description": "Supporting skill: LAN topology, VLAN, subnetting, DHCP, MikroTik, firewall, and hotspot."
+        }
+    ],
+    "projects": [{
+            "name": "Website Absensi",
+            "url": "https://github.com/bangpii/WebsiteAbsensi",
+            "homepage": "",
+            "focus": "Attendance web application",
+            "summary": "A web-based attendance system that replaces manual paper logs with a searchable, role-scoped record.",
+            "heroLabel": "Attendance system"
+        },
+        {
+            "name": "MathDrive",
+            "url": "https://github.com/bangpii/mathdrive",
+            "homepage": "",
+            "focus": "Math learning platform",
+            "summary": "An interactive platform for working through maths material, with progress tracked per learner.",
+            "heroLabel": "Learning platform"
+        },
+        {
+            "name": "DonasiYuk",
+            "url": "https://github.com/bangpii/donasiyuk",
+            "homepage": "",
+            "focus": "Donation platform",
+            "summary": "A donation platform that makes campaigns browsable and contributions trackable end to end.",
+            "heroLabel": "Donation platform"
+        },
+        {
+            "name": "JasaHub",
+            "url": "https://github.com/bangpii/jasahub",
+            "homepage": "",
+            "focus": "Freelance services hub",
+            "summary": "A marketplace-style hub connecting service providers with clients, from listings to request handling.",
+            "heroLabel": "Services marketplace"
+        },
+        {
+            "name": "Londrex",
+            "url": "https://github.com/bangpii/Lodrex",
+            "homepage": "",
+            "focus": "Laundry service management",
+            "summary": "A laundry service web app with public price lists, customer and service management, order tracking with receipt generation, and admin statistics.",
+            "heroLabel": "Web application"
+        },
+        {
+            "name": "BangPii Wisata",
+            "url": "https://github.com/bangpii/Wisata",
+            "homepage": "",
+            "focus": "Travel guide platform",
+            "summary": "A travel platform for publishing destination guides, photos, and practical visitor information.",
+            "heroLabel": "Travel platform"
+        }
+    ],
+    "gallery": [{
+            "name": "Website Absensi",
+            "image": "./assets/projects/website-absensi.webp",
+            "url": "https://adminabsensismkn1duakoto.lmssekolah.com",
+            "focus": "Attendance web application"
+        },
+        {
+            "name": "MathDrive",
+            "image": "./assets/projects/mathdrive.webp",
+            "url": "https://math-drive-tawny.vercel.app",
+            "focus": "Math learning platform"
+        },
+        {
+            "name": "DonasiYuk",
+            "image": "./assets/projects/donasiyuk.webp",
+            "url": "https://donasi-yuk.vercel.app",
+            "focus": "Donation platform"
+        },
+        {
+            "name": "JasaHub",
+            "image": "./assets/projects/jasahub.webp",
+            "url": "https://jasa-hub-tau.vercel.app",
+            "focus": "Freelance services hub"
+        },
+        {
+            "name": "Londrex",
+            "image": "./assets/projects/londrex.webp",
+            "focus": "Web application project"
+        },
+        {
+            "name": "BangPii Wisata",
+            "image": "./assets/projects/bangpii-wisata.webp",
+            "url": "https://wisata-smoky.vercel.app",
+            "focus": "Travel guide platform"
+        },
+        {
+            "name": "BangPii News",
+            "image": "./assets/projects/bangpiinews.webp",
+            "url": "https://bang-pii-news.vercel.app",
+            "focus": "News portal"
+        },
+        {
+            "name": "Thrift Online",
+            "image": "./assets/projects/thrift-online.webp",
+            "url": "https://raharpa-shopp.vercel.app",
+            "focus": "Online storefront"
+        },
+        {
+            "name": "Pernikahan",
+            "image": "./assets/projects/pernikahan.webp",
+            "url": "https://pernikahan-three.vercel.app",
+            "focus": "Wedding event platform"
+        },
+        {
+            "name": "Futsal Terminal",
+            "image": "./assets/projects/futsal-terminal.webp",
+            "focus": "Futsal match terminal"
+        },
+        {
+            "name": "BangPii PDF",
+            "image": "./assets/projects/bangpii-pdf.webp",
+            "url": "https://bangpii-pdf.vercel.app",
+            "focus": "PDF utility tool"
+        },
+        {
+            "name": "BangPii Cerita",
+            "image": "./assets/projects/bangpiicerita.webp",
+            "url": "https://bangpii-cerita.vercel.app",
+            "focus": "Story platform"
+        },
+        {
+            "name": "React Dokumentasi",
+            "image": "./assets/projects/react-dokumentasi.webp",
+            "url": "https://react-vault-sigma.vercel.app",
+            "focus": "React documentation site"
+        },
+        {
+            "name": "MakeOver",
+            "image": "./assets/projects/makeover.webp",
+            "url": "https://make-over-one.vercel.app",
+            "focus": "Web application project"
+        }
+    ],
+    "capabilities": [
+        "Full stack web application development",
+        "Responsive frontend with React and Tailwind CSS",
+        "REST API development with Express and Laravel",
+        "Database design with MySQL, PostgreSQL, and MongoDB",
+        "Authentication, roles, and session handling",
+        "Third-party API and payment integration",
+        "Responsive and mobile-first UI implementation",
+        "Git workflow and code review collaboration",
+        "Debugging and fixing defects across the stack",
+        "Deployment to shared hosting and VPS"
+    ],
+    "infrastructure": [
+        "Linux server installation and administration",
+        "Nginx and Apache web server configuration",
+        "MySQL and MariaDB administration",
+        "LAN topology and structured cabling",
+        "VLAN segmentation and switching",
+        "IP addressing, subnetting, and DHCP server",
+        "MikroTik configuration through Winbox",
+        "Router, firewall, and hotspot setup"
+    ],
+    "techStack": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "MongoDB",
+        "PostgreSQL",
+        "HTML5",
+        "CSS3",
+        "Git",
+        "Docker",
+        "Linux",
+        "MikroTik"
+    ],
+    "links": [{
+            "label": "GitHub",
+            "value": "bangpii",
+            "url": "https://github.com/bangpii",
+            "logo": "github",
+            "color": "181717"
+        },
+        {
+            "label": "Instagram",
+            "value": "@bangpiii",
+            "url": "https://www.instagram.com/bangpiiii/",
+            "logo": "instagram",
+            "color": "E4405F"
+        },
+        {
+            "label": "Email",
+            "value": "baihaqiearrafi6@gmail.com",
+            "url": "mailto:baihaqiearrafi6@gmail.com",
+            "logo": "gmail",
+            "color": "EA4335"
+        }
+    ],
+    "activity": {
+        "enabled": false,
+        "limit": 6
     },
-    {
-      "name": "Project Two",
-      "url": "https://github.com/yourusername/project-two",
-      "homepage": "",
-      "focus": "Secondary project focus",
-      "summary": "A second project that supports the professional direction of this profile.",
-      "heroLabel": "Active system"
-    }
-  ],
-  "techStack": [
-    "TypeScript",
-    "Next.js",
-    "Python",
-    "PostgreSQL",
-    "Playwright"
-  ],
-  "links": [
-    {
-      "label": "GitHub",
-      "value": "yourusername",
-      "url": "https://github.com/yourusername",
-      "logo": "github",
-      "color": "0B1220"
-    }
-  ],
-  "activity": {
-    "enabled": true,
-    "limit": 6
-  },
-  "appearance": {
-    "palette": "signal"
-  },
-  "footer": "Building thoughtful systems and sharing what works."
+    "appearance": {
+        "palette": "signal"
+    },
+    "footer": "Building web systems and the networks that carry them."
 }

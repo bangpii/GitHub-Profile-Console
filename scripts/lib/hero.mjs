@@ -61,7 +61,7 @@ function buildProfileLines(config) {
     { type: "row", key: "Base", value: config.profile.location },
     { type: "row", key: "Status", value: config.profile.status },
     { type: "blank" },
-    { type: "section", value: "RESEARCH.NODE" },
+    { type: "section", value: "STACK.WEB" },
     { type: "row", key: "Primary", value: config.research.primary },
     { type: "row", key: "Direction", value: config.research.direction },
     { type: "row", key: "Themes", value: config.research.themes },
@@ -77,7 +77,7 @@ function buildProfileLines(config) {
   config.links.slice(0, 2).forEach((link) => {
     lines.push({ type: "row", key: link.label, value: link.value });
   });
-  lines.push({ type: "footer", value: "signal.locked > PROFILE / BUILD / SHARE" });
+  lines.push({ type: "footer", value: "net.ready > PROFILE / BUILD / SHARE" });
 
   return lines;
 }
@@ -253,12 +253,12 @@ function createHeroSvg(config, colors, size, portrait) {
 <rect width="${layout.width}" height="${layout.height}" rx="${layout.outerRadius}" fill="url(#scanlines)"/>
 <rect x="${titlebar.x}" y="${titlebar.y}" width="${titlebar.width}" height="${titlebar.height}" rx="${titlebar.radius}" fill="${colors.panel}" fill-opacity="0.84"/>
 <circle cx="${titlebar.x + 21}" cy="${titlebar.y + titlebar.height / 2}" r="5" fill="#EF4444"/><circle cx="${titlebar.x + 39}" cy="${titlebar.y + titlebar.height / 2}" r="5" fill="#F59E0B"/><circle cx="${titlebar.x + 57}" cy="${titlebar.y + titlebar.height / 2}" r="5" fill="${colors.green}"/>
-<text x="${titleCenter}" y="${titlebar.y + titlebar.height / 2 + 5}" text-anchor="middle" class="terminal-label">${escapeXml(terminalUser)}@profile ~ % ./profile --live</text>
+<text x="${titleCenter}" y="${titlebar.y + titlebar.height / 2 + 5}" text-anchor="middle" class="terminal-label">${escapeXml(terminalUser)}@netops ~ % ./profile --live</text>
 ${isDesktop ? `<circle cx="${liveX}" cy="${titlebar.y + titlebar.height / 2}" r="4" fill="${colors.red}"><animate attributeName="opacity" values="1;0.15;1" dur="1.1s" repeatCount="indefinite"/></circle><text x="${liveX + 10}" y="${titlebar.y + titlebar.height / 2 + 4}" class="live-label">SCANNING</text>` : ""}
 <rect x="${visual.x}" y="${visual.y}" width="${visual.width}" height="${visual.height}" rx="${visual.radius}" fill="${colors.panel}" fill-opacity="0.38" stroke="url(#border)" stroke-opacity="0.42"/>
 <rect x="${info.x}" y="${info.y}" width="${info.width}" height="${info.height}" rx="${info.radius}" fill="${colors.panel}" fill-opacity="0.42" stroke="url(#border)" stroke-opacity="0.42"/>
 <text x="${layout.visualTitle.x}" y="${layout.visualTitle.y}" class="panel-title">VISUAL.MAP / PORTRAIT.SIGNAL</text>
-<text x="${layout.infoTitle.x}" y="${layout.infoTitle.y}" class="panel-title">SYSTEM.INFO / RESEARCH.BUILDER</text>
+<text x="${layout.infoTitle.x}" y="${layout.infoTitle.y}" class="panel-title">SYSTEM.INFO / FULLSTACK.WEB</text>
 ${ambientPortrait}
 <g clip-path="url(#portrait-clip)" mask="url(#portrait-reveal)"><text class="ascii">${ascii}</text></g>
 ${system.rows}
